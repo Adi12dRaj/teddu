@@ -64,6 +64,16 @@
   <!-- Three.js core -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
 
+  <script>
+    const music = document.getElementById('bgMusic');
+    const playBtn = document.getElementById('playMusic');
+
+    playBtn.addEventListener('click', () => {
+      music.play();
+      playBtn.style.display = 'none';
+    });
+  </script>
+
   <!-- Main JS -->
   <script src="test.js"></script>
 </body>
