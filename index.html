@@ -35,13 +35,27 @@
       font-family: 'Segoe UI', sans-serif;
       letter-spacing: 1px;
     }
+    #playMusic {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      background-color: #ff3366;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 10;
+    }
   </style>
 </head>
 <body>
   <!-- Background music -->
-  <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+  <audio id="bgMusic" loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
   </audio>
+  <button id="playMusic">Play Music 🎵</button>
 
   <!-- Romantic Text -->
   <div id="loveText">Love you soooo much my world</div>
