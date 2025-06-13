@@ -20,25 +20,30 @@
       width: 100%;
       text-align: center;
       font-size: 40px;
-      color: #ffccff;
       font-family: 'Segoe UI', sans-serif;
       letter-spacing: 1px;
       color: red;
     }
+
     #love {
       position: absolute;
       bottom: 10px;
       width: 100%;
       text-align: center;
       font-size: 30px;
-      color: #ffccff;
       font-family: 'Segoe UI', sans-serif;
       letter-spacing: 1px;
+      color: #ffccff;
     }
-    #playMusic {
+
+    #controls {
       position: absolute;
       top: 20px;
       right: 20px;
+      z-index: 10;
+    }
+
+    button {
       padding: 10px 15px;
       background-color: #ff3366;
       border: none;
@@ -46,7 +51,7 @@
       color: white;
       font-size: 16px;
       cursor: pointer;
-      z-index: 10;
+      margin-left: 5px;
     }
   </style>
 </head>
@@ -55,7 +60,12 @@
   <audio id="bgMusic" loop>
     <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
   </audio>
-  <button id="playMusic">Play Music 🎵</button>
+
+  <!-- Music control buttons -->
+  <div id="controls">
+    <button id="playMusic">Play Music 🎵</button>
+    <button id="stopMusic" style="display: none;">Stop Music ❌</button>
+  </div>
 
   <!-- Romantic Text -->
   <div id="loveText">Love you soooo much my world</div>
@@ -64,17 +74,27 @@
   <!-- Three.js core -->
   <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
 
+  <!-- Music Controls Script -->
   <script>
     const music = document.getElementById('bgMusic');
     const playBtn = document.getElementById('playMusic');
+    const stopBtn = document.getElementById('stopMusic');
 
     playBtn.addEventListener('click', () => {
       music.play();
       playBtn.style.display = 'none';
+      stopBtn.style.display = 'inline-block';
+    });
+
+    stopBtn.addEventListener('click', () => {
+      music.pause();
+      music.currentTime = 0;
+      playBtn.style.display = 'inline-block';
+      stopBtn.style.display = 'none';
     });
   </script>
 
-  <!-- Main JS -->
+  <!-- Main JS with Heart Scene -->
   <script src="test.js"></script>
 </body>
 </html>
