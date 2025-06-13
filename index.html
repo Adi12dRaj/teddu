@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Love</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    #loveText {
+      position: absolute;
+      bottom: 50px;
+      width: 100%;
+      text-align: center;
+      font-size: 40px;
+      color: #ffccff;
+      font-family: 'Segoe UI', sans-serif;
+      letter-spacing: 1px;
+      color: red;
+    }
+    #love {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 30px;
+      color: #ffccff;
+      font-family: 'Segoe UI', sans-serif;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Romantic Text -->
+  <div id="loveText">Love you soooo much my world</div>
+  <div id="love">Forever yours, Aditya Dhanraj.</div>
+
+  <!-- Three.js core -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.150.1/build/three.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="test.js"></script>
+</body>
+</html>
